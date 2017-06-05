@@ -22,13 +22,13 @@
  var displayAll = function(){
 
  	var query = "SELECT * FROM products";
- // Timeout       statement timeout : 40000;
+	//timeout : 40000;
  	connection.query(query,function(err, res){
 
  		console.log(res);
  	});
  
-productSearch();
+// productSearch();
 
  };
 
@@ -98,8 +98,14 @@ validate: function(value){
 	});
 
  };
+startUp();
 
-  //productSearch();
+function startUp(){
+ setTimeout(productSearch,3000);
+}
+
+
+
 
 
 
